@@ -1,0 +1,227 @@
+section {
+    height: 100vh;
+}
+
+.des {
+    color: #34a0a4;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.btn {
+    color: white;
+    background-color: #34a0a4;
+}
+
+.fa-brands {
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-brand {
+        width: 100px;
+    }
+}
+
+footer {
+    background-color: #34a0a4;
+}
+
+@media screen and (max-width: 576px) {
+    section {
+        height: 118vh;
+    }
+}
+
+.register {
+    color: #34a0a4;
+}
+
+.login .container {
+    margin-top: 100px;
+}
+
+.login {
+    height: 60vh;
+}
+
+.login h2 {
+    color: #34a0a4;
+}
+
+.attribution {
+    display: none !important;
+}
+
+.dashboard {
+    margin-top: 30px;
+}
+
+.board {
+    border-left: #34a0a4 solid 4px;
+}
+
+.dashboard h1 {
+    color: #34a0a4;
+}
+
+.add h1 {
+    color: #34a0a4;
+}
+
+
+.user h1 {
+    color: #34a0a4;
+}
+
+.revenue h1 {
+    color: #34a0a4;
+}
+
+.revenue .row {
+    margin-top: 100px;
+}
+
+.revenue .card {
+    background-color: #34a0a4;
+    color: white;
+}
+
+.product h1 {
+    color: #34a0a4;
+}
+
+.invoice h1 {
+    color: #34a0a4;
+}
+
+.update h1 {
+    color: #34a0a4;
+}
+
+.user p {
+    color: #34a0a4;
+}
+
+.nav-link:hover {
+    color: #34a0a4;
+    transition: width .3s;
+}
+
+.dropdown-item:hover {
+    color: #34a0a4;
+}
+
+.side-nav {
+    background-color: #34a0a4;
+}
+
+@media screen and (max-width: 576px) {
+    .add2 {
+        display: block !important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .nav-pills a {
+        margin-bottom: 40px;
+        font-size: 30px !important;
+    }
+}
+
+.nav-pills:hover a {
+    color: black !important;
+}
+
+
+.subscribe {
+    height: 64vh;
+}
+
+.subscribe h4 {
+    color: #34a0a4;
+}
+
+@media screen and (max-width: 768px) {
+    .subscribe {
+        margin-top: 30px;
+        height: 85vh;
+    }
+}
+
+
+@media screen and (max-width: 576px) {
+    .iframe1 {
+        height: 50vh !important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .iframe2 {
+        height: 30vh !important;
+    }
+}
+
+
+.subscribe-now {
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0, 0px);
+    }
+
+    50% {
+        transform: translate(0, 15px);
+    }
+
+    100% {
+        transform: translate(0, -0px);
+    }
+}
+
+.sign-up {
+    animation-name: floating2;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes floating2 {
+    0% {
+        transform: translate(0, 0px);
+    }
+
+    50% {
+        transform: translate(0, 15px);
+    }
+
+    100% {
+        transform: translate(0, -0px);
+    }
+}
+
+.company {
+    animation-name: floating3;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes floating3 {
+    0% {
+        transform: translate(0, 0px);
+    }
+
+    50% {
+        transform: translate(0, 15px);
+    }
+
+    100% {
+        transform: translate(0, -0px);
+    }
+}

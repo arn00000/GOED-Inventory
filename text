@@ -1,0 +1,49 @@
+<?php 
+    $all_outlet_total = 0;
+    $total = 0;
+    foreach ($outlets as $outlet): 
+        if($outlet['company_id'] == $company['id']):
+?>  
+            <div class="col-lg-4 col-md-6 align-self-center">
+                <div class="card border-0  shadow p-3 mb-5 bg-body rounded" style="border-left:#34a0a4 solid 4px !important;">
+                    <div class="card-body text-center d-flex justify-content-center">
+                        <img src="../images/sales.png" class="img-fluid mx-2" alt="">
+                        <h5 class=" align-self-center mx-2"><?php echo $outlet['name'] ?></h5>
+                    </div><hr>
+                    <div class="d-flex justify-content-between">
+                        <?php $total = 0; ?>
+                        <?php foreach($sold_outs as $sold_out): ?>
+                            <?php if($outlet['id'] == $sold_out['outlet_id']): ?>
+                                <?php  
+                                $total += $sold_out['selling_price'] * $sold_out['quantity'];
+                                ?>
+                            <?php endif;?>
+                        <?php endforeach; ?>
+                        <h5>Total Sales: RM<?php echo $total; ?></h5>
+                        <?php $all_outlet_total += $total; ?>
+                    </div>
+                </div>
+            </div>
+            <?php 
+        endif;
+    endforeach; 
+    ?>
+    <h1><?php echo $all_outlet_total ?> </h1>
+
+    <div class="col-lg-4 col-md-6 align-self-center">
+    <div class="card border-0  shadow p-3 mb-5 bg-body rounded" style="border-left:#34a0a4 solid 4px !important;">
+        <div class="card-body text-center d-flex justify-content-center">
+            <img src="../images/profit.png" class="img-fluid mx-2" alt="">
+            <h5 class=" align-self-center mx-2"><?php echo $outlet['name'] ?></h5>
+        </div><hr>
+        <div class="d-flex justify-content-between">
+            <?php $total = 0; ?>
+            <?php foreach($sold_outs as $sold_out): ?>
+                <?php if($outlet['id'] == $sold_out['outlet_id']): ?>
+                    <?php  $total += ($sold_out['selling_price'] - $sold_out['order_price']) * $sold_out['quantity'];?>
+                <?php endif;?>
+            <?php endforeach; ?>
+            <h5>Total Profit: RM<?php echo $total; ?></h5>
+        </div>
+    </div>
+</div>
