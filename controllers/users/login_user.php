@@ -6,8 +6,12 @@ require_once '../connection.php';
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-$user_query = "SELECT companies.id AS company_id, companies.date AS end_date, users.id, users.username, users.password, users.isAdmin FROM users JOIN companies ON users.company_id = companies.id WHERE username = '$username';";
+
+
+$user_query = "SELECT companies.id AS company_id, companies.date AS end_date, users.id, users.username, users.password, users.isAdmin FROM users JOIN companies ON users.company_id = companies.id WHERE users.username = '$username';";
 $user_result = mysqli_query($cn, $user_query);
+
+
 $user = mysqli_fetch_assoc($user_result);
 
 // foreach($users as $user);
